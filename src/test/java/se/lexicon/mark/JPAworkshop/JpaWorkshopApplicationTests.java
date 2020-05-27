@@ -1,4 +1,4 @@
-package se.lexicon.simon.JPAworkshop;
+package se.lexicon.mark.JPAworkshop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
