@@ -9,7 +9,7 @@ public class AppUser {
     private String lastName;
     private String email;
 
-    //This is needed.
+    //This is needed. Every entity MUST HAVE a default or empty constructor.
     public AppUser() {}
 
     public AppUser(String firstName, String lastName, String email) {
