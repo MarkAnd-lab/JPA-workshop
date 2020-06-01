@@ -1,5 +1,6 @@
 package se.lexicon.mark.JPAworkshop.entity;
 
+import javax.persistence.Entity;
 import java.util.Objects;
 
 public class AppUser {
