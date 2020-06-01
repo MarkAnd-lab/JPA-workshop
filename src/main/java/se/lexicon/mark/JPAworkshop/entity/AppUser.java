@@ -1,16 +1,23 @@
 package se.lexicon.mark.JPAworkshop.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class AppUser {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int appUserId;
+
     private String firstName;
     private String lastName;
     private String email;
 
-    //This is needed. Every entity MUST HAVE a default or empty constructor.
+    //This is needed.
     public AppUser() {}
 
     public AppUser(String firstName, String lastName, String email) {
