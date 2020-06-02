@@ -1,0 +1,1 @@
+insert into product(name, price) values ('fanta', 16.0);

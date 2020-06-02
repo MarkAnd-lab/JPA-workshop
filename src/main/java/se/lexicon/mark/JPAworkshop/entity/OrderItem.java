@@ -1,11 +1,24 @@
 package se.lexicon.mark.JPAworkshop.entity;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class OrderItem {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderItemId;
+
     private int quantity;
+
+    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH},
+            fetch = FetchType.EAGER)
     private Product product;
+
+    @ManyToOne (cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH},
+            fetch = FetchType.EAGER)
+    @JoinColumn(name = "productOrder_id")
     private ProductOrder productOrder;
 
     public OrderItem() {
